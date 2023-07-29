@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Aloe Vera",
+    "type": "toxic",
+    "img": "./",
+    "light": "outdoor",
+    "overwaters": "no"
+  },
+  {
+    "name": "Cactus",
+    "type": "non-toxic",
+    "img": "./",
+    "light": "outdoor",
+    "overwaters": "no"
+  },
+  {
+    "name": "Aglaonema",
+    "type": "toxic",
+    "img": "./",
+    "light": "mediumlight",
+    "overwaters": "no"
+  },
+  {
+    "name": "Monstera",
+    "type": "non-toxic",
+    "img": "./",
+    "light": "mediumlight",
+    "overwaters": "no"
+  },
+  {
+    "name": "Sansevieria",
+    "type": "toxic",
+    "img": "./",
+    "light": "lowlight",
+    "overwaters": "no"
+  },
+  {
+    "name": "Boston Fern",
+    "type": "non-toxic",
+    "img": "./",
+    "light": "lowlight",
+    "overwaters": "no"
+  },
+  {
+    "name": "Peace Lily",
+    "type": "toxic",
+    "img": "./",
+    "light": ["lowlight", "mediumlight", "outdoor"],
+    "overwaters": "yes"
+  }
+]
+
+  
