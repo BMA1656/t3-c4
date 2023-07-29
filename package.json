@@ -1,0 +1,25 @@
+{
+  "name": "t3-c4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BMA1656/t3-c4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BMA1656/t3-c4/issues"
+  },
+  "homepage": "https://github.com/BMA1656/t3-c4#readme",
+  "devDependencies": {
+    "eslint": "^8.46.0",
+    "prettier": "^3.0.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

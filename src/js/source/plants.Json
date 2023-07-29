@@ -1,0 +1,15 @@
+{
+    "outdoor": {
+      "toxic": ["Aloe Vera"],
+      "non-toxic": ["Cactus"]
+    },
+    "mediumlight": {
+      "toxic": ["Aglaonema","Peace Lily"],
+      "non-toxic": ["Monstera","Peace Lily"]
+    },
+    "lowlight": {
+      "toxic": ["Sansevieria","Peace Lily"],
+      "non-toxic": ["Boston Fern"]
+    }
+  }
+  
