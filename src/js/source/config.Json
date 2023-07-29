@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Aloe Vera",
     "type": "toxic",
     "img": "./",
@@ -7,6 +8,7 @@
     "overwaters": "no"
   },
   {
+    "id": 2,
     "name": "Cactus",
     "type": "non-toxic",
     "img": "./",
@@ -14,6 +16,7 @@
     "overwaters": "no"
   },
   {
+    "id": 3,
     "name": "Aglaonema",
     "type": "toxic",
     "img": "./",
@@ -21,6 +24,7 @@
     "overwaters": "no"
   },
   {
+    "id": 4,
     "name": "Monstera",
     "type": "non-toxic",
     "img": "./",
@@ -28,6 +32,7 @@
     "overwaters": "no"
   },
   {
+    "id": 5,
     "name": "Sansevieria",
     "type": "toxic",
     "img": "./",
@@ -35,6 +40,7 @@
     "overwaters": "no"
   },
   {
+    "id": 6,
     "name": "Boston Fern",
     "type": "non-toxic",
     "img": "./",
@@ -42,6 +48,7 @@
     "overwaters": "no"
   },
   {
+    "id": 7,
     "name": "Peace Lily",
     "type": "toxic",
     "img": "./",
