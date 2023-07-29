@@ -7,12 +7,14 @@ h1 {
     text-align: left;
 }
 
-form {
-    width: 300px;
-    margin: 0 auto;
-}
-
 .question {
     margin-bottom: 10px;
     text-align: left;
+}
+
+button {
+  color: white;
+  background-color: rgb(152, 5, 152);
+  padding: 10px 20px 10px 20px;
+  border-color: blueviolet;
 }
