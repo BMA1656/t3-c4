@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: left;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.question {
+    margin-bottom: 10px;
+    text-align: left;
+}
