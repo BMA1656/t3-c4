@@ -20,5 +20,11 @@ export function handleFormSubmit(event) {
     });
   
     // Print the form values in the console
+    for (const key in formValues) {
+      if (formValues.hasOwnProperty(key)) {
+        const value = formValues[key];
+        console.log(`${key}: ${value}`);
+      }
+    }
     console.log(formValues);
   }
