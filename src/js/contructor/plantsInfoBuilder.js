@@ -1,14 +1,16 @@
-import { renderCards } from "../modules/cards";
+import {
+  renderCards
+} from "../modules/cards";
 
 
 export default class Plant {
-  constructor(type, light, overwaters) {
+  constructor(type, light, overwaters,elements) {
     this.type = type;
     this.light = light;
     this.overwaters = overwaters;
     this.composting = "";
     this.style = "";
-    this.elements = [];
+    this.elements = elements;
   }
 
   addComposting(compostingValue) {
@@ -19,9 +21,6 @@ export default class Plant {
     this.style = styleValue;
   }
 
-  addElements(elementsValue) {
-    this.elements.push(elementsValue);
-  }
 
 
   makeCard() {
@@ -29,17 +28,12 @@ export default class Plant {
       type: this.type,
       light: this.light,
       overwaters: this.overwaters,
-      composting: this.composting,
-      style: this.style
+      compost: this.composting,
+      pot: this.style,
+      elements: this.elements
     };
-
-    if (this.elements.length > 0) {
-      cardData.elements = this.elements.join(", ");
-    } else {
-      cardData.elements = false;
-    }
-
-    renderCards(cardData); // Enviar el objeto a la función prueba
-    return cardData; // Opcional: Retornar el objeto generado
+    renderCards(cardData);
+    return cardData;
   }
+
 }
