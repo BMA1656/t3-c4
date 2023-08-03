@@ -1,5 +1,5 @@
 import Plant from "../contructor/plantsInfoBuilder.js";
-import renderCards from "../source/components/card.js";
+import renderCards from "../components/card.js";
 import plants from "../source/config.js"
 
 function getName(object) {
@@ -19,9 +19,10 @@ export default function cretateObject(object) {
     const plant = new Plant(type, light, watering,elements );
     plant.addComposting(composting);
     plant.addStyle(style);
+    plant.addName(getName(object))
     plant.makeCard();
   
 
-  console.log(plant.makeCard());
-  renderCards(plant.makeCard());
+  console.log(getName(object));
+  
 }

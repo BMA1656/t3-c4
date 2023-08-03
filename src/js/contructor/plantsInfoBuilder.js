@@ -1,10 +1,9 @@
-import {
-  renderCards
-} from "../modules/cards.js";
+import renderCards from "../components/card.js";
 
 
 export default class Plant {
-  constructor(type, light, overwaters) {
+  constructor(type, light, overwaters,elements) {
+    this.name="";
     this.type = type;
     this.light = light;
     this.overwaters = overwaters;
@@ -20,17 +19,25 @@ export default class Plant {
   addStyle(styleValue) {
     this.style = styleValue;
   }
+  addName(nameValue) {
+    this.name = nameValue;
+  }
 
 
 
   makeCard() {
     const cardData = {
+      name:this.name,
       type: this.type,
       light: this.light,
       overwaters: this.overwaters,
       composting: this.composting,
-      style: this.style
+      style: this.style,
+      elements:this.elements
     };
+
+
+
     renderCards(cardData);
     return cardData;
   }
