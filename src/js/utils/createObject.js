@@ -1,5 +1,4 @@
-import Plant from "../contructor/plantsInfoBuilder.js";
-import renderCards from "../components/card.js";
+import Plant from "../contructor/plantsInfoBuilder.js"
 import plants from "../source/config.js"
 
 function getName(object) {
