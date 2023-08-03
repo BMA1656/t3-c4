@@ -1,13 +1,16 @@
+import {
+  renderCards
+} from "../modules/cards.js";
+
+
 export default class Plant {
-  constructor(name, /* type, light, overwater,  */watering) {
-    this.name = name;
-    /* this.type = type;
-    this.light = light; */
-    /* this.overwater = overwater; */
-    this.watering = watering;
+  constructor(type, light, overwaters) {
+    this.type = type;
+    this.light = light;
+    this.overwaters = overwaters;
     this.composting = "";
     this.style = "";
-    this.elements = [];
+    this.elements = elements;
   }
 
   addComposting(compostingValue) {
@@ -18,29 +21,18 @@ export default class Plant {
     this.style = styleValue;
   }
 
-  addElements(elementsValue) {
-    this.elements.push(elementsValue);
-  }
 
 
   makeCard() {
     const cardData = {
-      name: this.name,
-      /* type: this.type,
-      light: this.light, */
-      /* overwater: this.overwater, */
-      watering: this.watering,
+      type: this.type,
+      light: this.light,
+      overwaters: this.overwaters,
       composting: this.composting,
       style: this.style
     };
-
-    if (this.elements.length > 0) {
-      cardData.elements = this.elements.join(",");
-    } else {
-      cardData.elements = false;
-    }
-
-    // prueba(cardData); // Enviar el objeto a la función prueba
-    return cardData; // Opcional: Retornar el objeto generado
+    renderCards(cardData);
+    return cardData;
   }
+
 }

@@ -15,15 +15,12 @@ function getName(object) {
 }
 
 export default function cretateObject(object) {
-  const { watering, composting, style, elements } = object;
-  const namePlant = getName(object);
-  const plant = new Plant(namePlant, watering);
-  plant.addComposting(composting);
-  plant.addStyle(style);
-
-  if (elements) {
-    elements.forEach(element => plant.addElements(element));
-  }
+    const { type, light, watering, composting, style, elements } = object;
+    const plant = new Plant(type, light, watering,elements );
+    plant.addComposting(composting);
+    plant.addStyle(style);
+    plant.makeCard();
+  
 
   console.log(plant.makeCard());
   renderCards(plant.makeCard());
