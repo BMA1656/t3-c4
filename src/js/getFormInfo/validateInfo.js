@@ -21,6 +21,7 @@ export function handleFormSubmit(event) {
     }
   });
   cretateObject(formValues)
+  console.log(formValues)
 
 }
 

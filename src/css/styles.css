@@ -1,15 +1,21 @@
+@import url('./card.css');
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+main {
+  display: flex;
 }
 
 h1 {
-    text-align: left;
+  text-align: left;
 }
 
 .question {
-    margin-bottom: 10px;
-    text-align: left;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 button {
@@ -17,4 +23,8 @@ button {
   background-color: rgb(152, 5, 152);
   padding: 10px 20px 10px 20px;
   border-color: blueviolet;
+}
+
+p {
+  margin: 5px;
 }
