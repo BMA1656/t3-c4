@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Aloe Vera",
     "type": "toxic",
-    "img": "./",
+    "img": "src/img/plant-aloe.png",
     "light": "outdoor",
     "overwaters": "no"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Cactus",
     "type": "non-toxic",
-    "img": "./",
+    "img": "src/img/plant-cactus.png",
     "light": "outdoor",
     "overwaters": "no"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Aglaonema",
     "type": "toxic",
-    "img": "./",
+    "img": "src/img/plant-aglaonema.png",
     "light": "mediumlight",
     "overwaters": "no"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Monstera",
     "type": "non-toxic",
-    "img": "./",
+    "img": "src/img/plant-monstera.png",
     "light": "mediumlight",
     "overwaters": "no"
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "name": "Sansevieria",
     "type": "toxic",
-    "img": "./",
+    "img": "src/img/plant-sansevieria.png",
     "light": "lowlight",
     "overwaters": "no"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "name": "Boston Fern",
     "type": "non-toxic",
-    "img": "./",
+    "img": "src/img/plant-fern.png",
     "light": "lowlight",
     "overwaters": "no"
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "name": "Peace Lily",
     "type": "toxic",
-    "img": "./",
+    "img": "src/img/plant-peace-lily.png",
     "light": ["lowlight", "mediumlight", "outdoor"],
     "overwaters": "yes"
   }
