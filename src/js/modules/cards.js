@@ -1,8 +1,10 @@
-function renderCards(data) {
-  const panels = document.getElementsByClassName('card-container');
-  const cards = data.map(element => {
+export function renderCards(data) {
+  
+   const container = document.getElementById('cardContainer');
+   console.log(container)
+   const cards = container.map(element => {
     const {title, image, name, soil, pot, color, extras} = element;
 
-    return 
-  })
+     return 
+   })
 }

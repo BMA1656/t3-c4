@@ -1,3 +1,6 @@
+import { renderCards } from "../modules/cards";
+
+
 export default class Plant {
   constructor(type, light, overwaters) {
     this.type = type;
@@ -36,7 +39,7 @@ export default class Plant {
       cardData.elements = false;
     }
 
-    // prueba(cardData); // Enviar el objeto a la función prueba
+    renderCards(cardData); // Enviar el objeto a la función prueba
     return cardData; // Opcional: Retornar el objeto generado
   }
 }
