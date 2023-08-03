@@ -1,8 +1,10 @@
 export default class Plant {
-  constructor(type, light, overwaters) {
-    this.type = type;
-    this.light = light;
-    this.overwaters = overwaters;
+  constructor(name, /* type, light, overwater,  */watering) {
+    this.name = name;
+    /* this.type = type;
+    this.light = light; */
+    /* this.overwater = overwater; */
+    this.watering = watering;
     this.composting = "";
     this.style = "";
     this.elements = [];
@@ -23,15 +25,17 @@ export default class Plant {
 
   makeCard() {
     const cardData = {
-      type: this.type,
-      light: this.light,
-      overwaters: this.overwaters,
+      name: this.name,
+      /* type: this.type,
+      light: this.light, */
+      /* overwater: this.overwater, */
+      watering: this.watering,
       composting: this.composting,
       style: this.style
     };
 
     if (this.elements.length > 0) {
-      cardData.elements = this.elements.join(", ");
+      cardData.elements = this.elements.join(",");
     } else {
       cardData.elements = false;
     }
