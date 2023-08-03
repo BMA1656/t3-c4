@@ -1,6 +1,6 @@
 import {
   renderCards
-} from "../modules/cards";
+} from "../modules/cards.js";
 
 
 export default class Plant {
