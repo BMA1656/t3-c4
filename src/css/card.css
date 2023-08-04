@@ -1,23 +1,60 @@
+/* cards*/
+
 .card {
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgb(152, 5, 152);
-}
-
-.name-plant {
-  display: block;
-  text-align: center;
-}
-
-.img-container {
-  margin: 5px 0px;
-  background-color: white;
-  width: 100%;
-  height: 200px;
-}
-
-.info{ 
-  display: flex;
-  gap: 15px;
-}
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(152, 5, 152);
+  }
+  
+  .name-plant {
+    display: block;
+    text-align: center;
+  }
+  
+  .img-container {
+    margin: 5px 0px;
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .info{ 
+    display: flex;
+    gap: 15px;
+  }
+  
+  .image {
+    width: 100px;
+    height: auto;
+  }
+  .plantImage {
+    margin-bottom: -101px;
+  }
+  .potImage {
+    z-index: 3;
+    margin-top: -25px;
+    width: 92px;
+    margin-bottom: -101px;
+  }
+  .soilImage {
+    z-index: 4;
+    width: 73px;
+    height: auto;
+    margin-bottom: -108px;
+  }
+  .extramoss-pole{
+    z-index: 2;
+  }
+  .extrapebbles{
+    z-index: 3;
+    margin-top: -162px;
+  }
+  .extramini-plants{
+    z-index: 4;
+    margin-top: -136px;
+  }
