@@ -1,60 +1,94 @@
 /* cards*/
 
 .card {
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgb(152, 5, 152);
-  }
-  
-  .name-plant {
-    display: block;
-    text-align: center;
-  }
-  
-  .img-container {
-    margin: 5px 0px;
-    background-color: white;
-    width: 100%;
-    height: 200px;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .info{ 
-    display: flex;
-    gap: 15px;
-  }
-  
-  .image {
-    width: 100px;
-    height: auto;
-  }
-  .plantImage {
-    margin-bottom: -101px;
-  }
-  .potImage {
-    z-index: 3;
-    margin-top: -25px;
-    width: 92px;
-    margin-bottom: -101px;
-  }
-  .soilImage {
-    z-index: 4;
-    width: 73px;
-    height: auto;
-    margin-bottom: -108px;
-  }
-  .extramoss-pole{
-    z-index: 2;
-  }
-  .extrapebbles{
-    z-index: 3;
-    margin-top: -162px;
-  }
-  .extramini-plants{
-    z-index: 4;
-    margin-top: -136px;
-  }
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(152, 5, 152);
+  width: 220px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-plant {
+  display: block;
+  text-align: center;
+}
+
+.img-container {
+  margin: 5px 0px;
+  background-color: white;
+  width: 200px;
+  height: 166px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.info {
+  display: flex;
+  gap: 15px;
+}
+.descrption {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.image {
+  width: 100px;
+  height: auto;
+}
+.plantImage {
+  z-index: 3;
+  position: relative;
+  top: 5px;
+}
+.potImage {
+  z-index: 2;
+  width: 92px;
+  position: relative;
+  top: -124px;
+}
+.soilImage {
+  z-index: 4;
+  width: 73px;
+  height: auto;
+  position: relative;
+  top: -225px;
+  left: -3px;
+}
+.extramoss-pole {
+  z-index: 2;
+  position: absolute;
+}
+.extrapebbles {
+  z-index: 3;
+  position: absolute;
+  top: 8px;
+}
+.extramini-plants {
+  position: relative;
+  z-index: 4;
+  top: -357px;
+}
+.infoPot,
+.infoSoil,
+.infoName,
+.infoExtras {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+.descripCard {
+  padding: 12px;
+}
+
+.moreElements {
+  font-size: 12px;
+}
