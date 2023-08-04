@@ -20,8 +20,4 @@ export default function cretateObject(object) {
     plant.addStyle(style);
     plant.addName(getName(object))
     plant.makeCard();
-  
-
-  console.log(getName(object));
-  
 }

@@ -41,8 +41,6 @@ function addElementsToCard(elements) {
     } else {
       imgContainer.innerHTML += `<img class="image extra${elements}" src="src/img/${extraImgUrl(elements)}.png" alt="">`;
     }
-
-    console.log("si hay elementos", imgContainer);
   } else {
     const test = document.getElementById("elements");
     if (test) {
