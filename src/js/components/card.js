@@ -1,10 +1,11 @@
-import extraImgUrl from "../utils/extraUrl.js";
+import { extraImgUrl } from "../utils/extratools.js";
 
 function renderCards(plant) {
   const cardContainer = document.getElementById('card-container');
   cardContainer.innerHTML = "";
   const {
     name,
+    color,
     composting,
     style,
     elements
@@ -22,6 +23,7 @@ function renderCards(plant) {
       <div class="description">
       <div class="infoName"><h3>Name: </h3><p class="descripCard">${name}</p></div>
       <div class="infoSoil"><h3>Soil: </h3><p class="descripCard">${composting}</p></div>
+      <div class="infoSoil"><h3>Color: </h3><p class="descripCard">${color}</p></div>
         <div class="infoPot"><h3>Pot: </h3><p class="descripCard">${style}</p></div>
         <div id="elements" class="infoExtras"><h3>Extras: </h3><p class="descripCard moreElements">${elements}</p></div>
       </div>

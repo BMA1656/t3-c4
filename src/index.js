@@ -1,5 +1,5 @@
-import clearCard from './js/events/clearCard.js';
-import  {handleFormSubmit}  from './js/getFormInfo/validateInfo.js';
+import {clearCard} from './js/utils/extratools.js';
+import  {getFormInfo}  from './js/formInfo/validateInfo.js';
 
-document.getElementById('plantForm').addEventListener('submit', handleFormSubmit);
+document.getElementById('plantForm').addEventListener('submit', getFormInfo);
 document.getElementById('plantForm').addEventListener('reset', clearCard);

@@ -42,12 +42,32 @@ h1 {
   position: absolute;
   left: 5px;
 }
-button {
+.subBt,
+.resetBt {
   color: white;
   background-color: rgb(152, 5, 152);
   padding: 10px 20px 10px 20px;
-  border-color: blueviolet;
+  border-color: 2px solid blueviolet;
+}
+.subBt:hover {
+  background-color: blueviolet;
+}
+.subBt:active{
+  background-color: white;
+  color: rgb(152, 5, 152);
 }
 
+.resetBt {
+  border: solid rgb(152, 5, 152) 1.2px;
+  background-color: white;
+  color: rgb(152, 5, 152);
+}
 
-
+.resetBt:hover {
+  background-color: rgb(193, 87, 193);
+  color: white;
+}
+.resetBt:active {
+  background-color: rgb(152, 5, 152);
+  color: white;
+}
