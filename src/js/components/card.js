@@ -8,7 +8,9 @@ function renderCards(plant) {
     color,
     composting,
     style,
-    elements
+    elements,
+    url,
+    pod
   } = plant;
 
 
@@ -16,8 +18,8 @@ function renderCards(plant) {
     <div class="card">
       <p>The perfect plant for you <span class="name-plant">${name}</span></p>
       <div id="imgPlantsContainer" class="img-container">
-        <img class="image plantImage" src="src/img/plant-${name}.png" alt="">
-        <img class="image potImage" src="src/img/simple-${style}-pot.png" alt="">
+        <img class="image plantImage" src="${url}" alt="">
+        <img class="image potImage" src="${pod}" alt="">
         <img class="image soilImage" src="src/img/soil-${composting}.png" alt="">
       </div>
       <div class="description">

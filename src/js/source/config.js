@@ -1,31 +1,60 @@
-const plants = {
-  lowlight: {
-    toxic: {
-      underwater: 'sansevieria',
-      overwater: 'peace-lily',
-    },
-    nonToxic: {
-      underwater: 'boston-fern',
-    },
+const plantsData = [
+  {
+    id: 1,
+    name: "Sansevieria",
+    type: ["toxic"],
+    img: "src/img/plant-sansevieria.png",
+    light: ["lowlight"],
+    watering: "underwater",
   },
-  mediumlight: {
-    toxic: {
-      underwater: 'aglaonema',
-      overwater: 'peace-lily',
-    },
-    nonToxic: {
-      underwater: 'monstera',
-      overwater: 'peace-lily',
-    },
+  {
+    id: 2,
+    name: "Peace Lily",
+    type: ["toxic", "nonToxic"],
+    img: "src/img/plant-peace-lily.png",
+    light: ["lowlight", "mediumlight"],
+    watering: "overwater",
   },
-  outdoor: {
-    toxic: {
-      underwater: 'aloe-vera',
-    },
-    nonToxic: {
-      underwater: 'cactus',
-    },
+  {
+    id: 3,
+    name: "Boston Fern",
+    type: ["nonToxic"],
+    img: "src/img/plant-boston-fern.png",
+    light: ["lowlight"],
+    watering: "underwater",
   },
-};
+  {
+    id: 4,
+    name: "Aglaonema",
+    type: ["toxic"],
+    img: "src/img/plant-aglaonema.png",
+    light: ["mediumlight"],
+    watering: "underwater",
+  },
+  {
+    id: 5,
+    name: "Monstera",
+    type: ["nonToxic"],
+    img: "src/img/plant-monstera.png",
+    light: ["mediumlight"],
+    watering: "underwater",
+  },
+  {
+    id: 6,
+    name: "Aloe Vera",
+    type: ["toxic"],
+    img: "src/img/plant-aloe.png",
+    light: ["outdoor"],
+    watering: "underwater",
+  },
+  {
+    id: 7,
+    name: "Cactus",
+    type: ["nonToxic"],
+    img: "./src/img/plant-cactus.png",
+    light: ["outdoor"],
+    watering: "underwater",
+  },
+];
 
-export default plants
+export default plantsData;

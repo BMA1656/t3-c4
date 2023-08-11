@@ -1,6 +1,6 @@
 import cretateObject from "../utils/createObject.js";
 
-export function getFormInfo(event) {
+export default function getFormInfo(event) {
   event.preventDefault(); // Prevent the form from submitting
 
   // Get the form data
@@ -21,7 +21,7 @@ export function getFormInfo(event) {
     }
   });
   cretateObject(formValues)
-  console.log(formValues)
+
 
 }
 
