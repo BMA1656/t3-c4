@@ -46,6 +46,10 @@ project-name/
 |- README.md (this file)
 
 
-to start work on this proyect use
+To start working on this proyect ussing webpack 
+`npx run start`
 
-`npx webpack server`
+to see the changes in the project use
+
+`npm run build`
+
