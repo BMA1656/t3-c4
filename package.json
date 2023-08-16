@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --mode production",
+    "start": "webpack serve --config webpack.config.js --open"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
     "eslint": "^8.46.0",
     "prettier": "^3.0.0",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

@@ -12,17 +12,19 @@ export default class Plant {
   addComposting(compostingValue) {
     this.composting = compostingValue;
   }
-
+  addMaterial(material){
+    this.material = material
+  }
   addStyle(styleValue) {
     this.style = styleValue
   }
   addName(nameValue) {
     this.name = nameValue;
   }
-  addUrl(planturl) {
+  addPlantUrl(planturl) {
     this.url = planturl
   }
-  addPod(plantPod) {
+  addPodUrl(plantPod) {
     this.podUrl = plantPod
   }
   makeCard() {
@@ -33,11 +35,13 @@ export default class Plant {
       light: this.light,
       overwaters: this.overwaters,
       composting: this.composting,
-      url: this.url,
+      platUrl: this.url,
+      material: this.material,
       style: this.style,
       elements: this.elements,
-      pod: this.podUrl,
+      podUrl: this.podUrl,
     };
+    console.log(cardData)
     renderCards(cardData);
   }
 

@@ -44,3 +44,8 @@ project-name/
 |- .prettierrc (Prettier configuration file)
 |- package.json (Node.js dependencies file)
 |- README.md (this file)
+
+
+to start work on this proyect use
+
+`npx webpack server`
