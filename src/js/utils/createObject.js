@@ -47,33 +47,32 @@ export default function cretateObject(object) {
   }
  
   function getMaterial(object) {
-
     switch (object) {
       case "clay":
         console.log("Opción 1 seleccionada");
         plantmat = "Clay";
-        plantStyle = "simple"
+        plantStyle = object+" simple pod"
         plantPodUrl = "img/simple-clay-pot.png";
         console.log(plantmat,plantPodUrl,plantStyle)
         break;
       case "clay-decorated":
         console.log("Opción 2 seleccionada");
         plantmat = "Clay Decorated";
-        plantStyle = "Decorated"
+        plantStyle = object+" decorated pot"
         plantPodUrl = "src/img/simple-clay-pot-decorated.png js/utils/createObject.js";
         console.log(plantmat,plantPodUrl,plantStyle)
         break;
       case "ceramic":
         console.log("Opción 3 seleccionada");
         plantmat = "ceramic";
-        plantStyle = "simple"
+        plantStyle =   object+" simple pot"
         plantPodUrl = "img/simple-ceramic-pot.png";
         console.log(plantmat,plantPodUrl)
         break;
       case "ceramic-decorated":
         console.log("Opción 4 seleccionada");
         plantmat = "Ceramic Decorated";
-        plantStyle = "Decorated"
+        plantStyle = object+" Decorated pod"
         plantPodUrl = "img/simple-ceramic-pot-decorated.png";
         console.log(plantmat,plantPodUrl);
         break;
