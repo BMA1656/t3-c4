@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .name-plant {
@@ -91,4 +92,14 @@
 
 .moreElements {
   font-size: 12px;
+}
+a {
+  text-decoration: none;
+}
+
+.customize-btn {
+  color: white;
+  background-color: rgb(152, 5, 152);
+  padding: 10px 20px 10px 20px;
+  border-color: blueviolet;
 }
