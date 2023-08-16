@@ -12,35 +12,36 @@ export default class Plant {
   addComposting(compostingValue) {
     this.composting = compostingValue;
   }
-
+  addMaterial(material){
+    this.material = material
+  }
   addStyle(styleValue) {
-    if (styleValue === "clay") {
-      this.style = "Simple clay";
-      this.color = "Clay";
-    }else if(styleValue === "clay-decorated"){
-      this.style = "Plainted clay decorated";
-      this.color = "Clay";
-    }else{
-      this.style = "Simple ceramic"
-      this.color = "Ceramic";
-    }   
+    this.style = styleValue
   }
   addName(nameValue) {
     this.name = nameValue;
   }
-
+  addPlantUrl(planturl) {
+    this.url = planturl
+  }
+  addPodUrl(plantPod) {
+    this.podUrl = plantPod
+  }
   makeCard() {
     const cardData = {
       name: this.name,
       type: this.type,
-      color:this.color,
+      color: this.style,
       light: this.light,
       overwaters: this.overwaters,
       composting: this.composting,
+      platUrl: this.url,
+      material: this.material,
       style: this.style,
-      elements: this.elements
+      elements: this.elements,
+      podUrl: this.podUrl,
     };
-
+    console.log(cardData)
     renderCards(cardData);
   }
 
