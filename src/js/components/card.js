@@ -27,7 +27,9 @@ function renderCards(plant) {
         <div class="infoPot"><h3>Pot: </h3><p class="descripCard">${style}</p></div>
         <div id="elements" class="infoExtras"><h3>Extras: </h3><p class="descripCard moreElements">${elements}</p></div>
       </div>
-    </div>`
+    </div>
+    <a class="customize-btn" href="../../../customize.html">Customize</a>`
+
   cardContainer.innerHTML = card;
   addElementsToCard(elements)
 }
