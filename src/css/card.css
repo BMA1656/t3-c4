@@ -63,7 +63,7 @@
   top: -225px;
   left: -3px;
 }
-.extramoss-pole {
+.extramoss {
   z-index: 2;
   position: absolute;
 }
@@ -72,7 +72,7 @@
   position: absolute;
   top: 8px;
 }
-.extramini-plants {
+.extramini {
   position: relative;
   z-index: 4;
   top: -357px;

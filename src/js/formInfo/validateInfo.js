@@ -1,6 +1,6 @@
 import cretateObject from "../utils/createObject.js";
 
-export function handleFormSubmit(event) {
+export function getFormInfo(event) {
   event.preventDefault(); // Prevent the form from submitting
 
   // Get the form data

@@ -14,7 +14,7 @@ Open a terminal in the project folder.
 cd project-name
 Install project dependencies using npm.
 
-npm install
+`npm install`
 Usage
 
 Production
@@ -44,8 +44,3 @@ project-name/
 |- .prettierrc (Prettier configuration file)
 |- package.json (Node.js dependencies file)
 |- README.md (this file)
-Contributions
-If you find any issues or have suggestions to improve this project, feel free to submit a pull request or open an issue in the repository.
-
-License
-This project is licensed under the MIT License. Please refer to the LICENSE file for more details.
