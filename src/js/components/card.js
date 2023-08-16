@@ -32,7 +32,7 @@ function renderCards(plant) {
         <div class="infoPot"><h3>Pot: </h3><p class="descripCard">${material}</p></div>
         <div id="elements" class="infoExtras"><h3>Extras: </h3><p class="descripCard moreElements">${elements}</p></div>
       </div>
-      <a href="custom.html" id="Customice">Customice</a>
+      <a class="customize-btn" href="customize.html" id="Customice">Customice</a>
     </div>
     `
   cardContainer.innerHTML = card;
