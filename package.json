@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack serve --config webpack.config.js --open"
+    "builddev": "webpack --mode development",
+    "start": "webpack serve --open",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   "homepage": "https://github.com/BMA1656/t3-c4#readme",
   "devDependencies": {
     "eslint": "^8.46.0",
+    "html-webpack-plugin": "^5.5.3",
     "prettier": "^3.0.0",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",

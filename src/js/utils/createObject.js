@@ -19,6 +19,7 @@ export default function cretateObject(object) {
   } = object;
   const plant = new Plant(type, light, watering, elements);
   plant.addComposting(composting);
+  plant.addColor(style)
   plant.addStyle(plantStyle);
   plant.addMaterial(plantmat)
   plant.addName(plantname)
@@ -51,28 +52,28 @@ export default function cretateObject(object) {
       case "clay":
         console.log("Opción 1 seleccionada");
         plantmat = "Clay";
-        plantStyle = object+" simple pot"
+        plantStyle = "Clay simple pod"
         plantPodUrl = "img/simple-clay-pot.png";
         console.log(plantmat,plantPodUrl,plantStyle)
         break;
       case "clay-decorated":
         console.log("Opción 2 seleccionada");
         plantmat = "Clay Decorated";
-        plantStyle = object+" decorated pot"
-        plantPodUrl = "src/img/simple-clay-pot-decorated.png js/utils/createObject.js";
+        plantStyle = "Clay decorated pot"
+        plantPodUrl = "img/simple-clay-pot-decorated.png";
         console.log(plantmat,plantPodUrl,plantStyle)
         break;
       case "ceramic":
         console.log("Opción 3 seleccionada");
-        plantmat = "ceramic";
-        plantStyle =   object+" simple pot"
+        plantmat = "Ceramic";
+        plantStyle =   " Ceramic simple pot"
         plantPodUrl = "img/simple-ceramic-pot.png";
         console.log(plantmat,plantPodUrl)
         break;
       case "ceramic-decorated":
         console.log("Opción 4 seleccionada");
         plantmat = "Ceramic Decorated";
-        plantStyle = object+" Decorated pod"
+        plantStyle = "Ceramic Decorated pod"
         plantPodUrl = "img/simple-ceramic-pot-decorated.png";
         console.log(plantmat,plantPodUrl);
         break;
