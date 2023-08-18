@@ -1,40 +1,54 @@
-import Publisher from "./publisher.js";
-
-const potMaterialChange = new Publisher();
-const potDecorationChange = new Publisher();
-const potColorChange = new Publisher();
+import Publisher from './publisher.js'
 
 // MATERIAL //
-const handlePotMaterialChange = (event) => {
-  //data-id = ceramic
-  potChange.publish(material)
-};
+const potMaterialChange = new Publisher()
 
-// DECORATION //
-const handlePotDecorationChange = () => {
-  //data-id = simple
-  potChange.publish(decoration)
-};
-
-// COLOR //
-const colorInputs = document.querySelectorAll('');
-const handleColorChange = (event) => {
-  //data-id = purple
-  const color = event.currentTarget.dataset.id;
-
-  potChange.publish(color);
+const handlePotMaterialChange = () => {
+  const inputMaterial = document.querySelectorAll('.input-material')
+  inputMaterial.forEach((input) => {
+    input.addEventListener('change', (event) => {
+      const material = event.currentTarget.dataset.id;
+      potMaterialChange.publish(material)
+    })
+  });
 }
 
-//evento para los input que selecciona el color
-const initColors = () => {
-  colorInputs.forEach(col => {
-    col.addEventListener('change', handleColorChange);
+// DECORATION //
+const potDecorationChange = new Publisher()
+
+const handlePotDecorationChange = () => {
+  const inputDecoration = document.querySelectorAll('.input-decoration')
+  inputDecoration.forEach((input) => {
+    input.addEventListener('change', (event) => {
+      const decoration = event.currentTarget.dataset.id;
+      potDecorationChange.publish(decoration)
+    })
   });
+}
+
+// COLOR //
+const potColorChange = new Publisher()
+
+const handlePotColorChange = () => {
+  const inputDecoration = document.querySelectorAll('.input-color')
+  inputDecoration.forEach((input) => {
+    input.addEventListener('change', (event) => {
+      const color = event.currentTarget.dataset.id;
+      potColorChange.publish(color)
+    })
+  });
+}
+
+/// INICIALIZA FUNCIONES QUE OBTIENEN EL PARAMETRO
+function getPotInputsValues () {
+  handlePotMaterialChange();
+  handlePotDecorationChange();
+  handlePotColorChange();
 }
 
 export {
   potMaterialChange,
   potDecorationChange,
   potColorChange,
-  initColors
+  getPotInputsValues,
 }

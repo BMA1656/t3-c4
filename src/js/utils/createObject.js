@@ -45,7 +45,7 @@ export default function cretateObject(object) {
     });
     return plantvalue;
   }
- 
+
   function getMaterial(object) {
     switch (object) {
       case "clay":
@@ -59,7 +59,7 @@ export default function cretateObject(object) {
         console.log("Opción 2 seleccionada");
         plantmat = "Clay Decorated";
         plantStyle = object+" decorated pot"
-        plantPodUrl = "src/img/simple-clay-pot-decorated.png js/utils/createObject.js";
+        plantPodUrl = "img/simple-clay-pot-decorated.png";
         console.log(plantmat,plantPodUrl,plantStyle)
         break;
       case "ceramic":

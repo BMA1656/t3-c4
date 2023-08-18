@@ -1,13 +1,16 @@
-/* const potColorToggle = document.getElementById('potColorToggle');
-const potColorOptions = document.getElementById('potColorOptions');
+import renderCards from './js/components/card.js';
+import { getPotInputsValues } from './js/config/pot.js';
+import initRenderPots from './js/config/renderPots.js';
+import initSoil from './js/config/soil.js';
+import initNamePlant from './js/config/plant.js';
+import initExtras from './js/config/extras.js';
 
-potColorToggle.addEventListener('change', (event) => {
-    if (event.target.checked) {
-        potColorOptions.style.display = 'block';
-    } else {
-        potColorOptions.style.display = 'none';
-    }
-}); */
+getPotInputsValues();
+initRenderPots();
+initSoil();
+initNamePlant();
+initExtras();
+
 const decorationOptions = document.getElementById('decorationOptions')
 const decorationToggle = document.getElementById('decorationToggle');
 const toggleTextDecoration = document.getElementById('toggleTextDecoration');
@@ -35,25 +38,25 @@ colorToggle.addEventListener('change', function () {
   }
 });
 
-
-
 const originalPlantData = localStorage.getItem("localPlant");
-const originalPlant = JSON.parse(originalPlantData);
-
+const originalPlant = JSON.parse(originalPlantData); 
 
 const form = document.getElementById('customizationForm');
 const selectedPlantData = { ...originalPlant };
 
-function updateSelectedPlantData() {
- /*  selectedPlantData.name = document.getElementById('choosePlant').value; */
+
+/* function updateSelectedPlantData() {
+ //selectedPlantData.name = document.getElementById('choosePlant').value;
   selectedPlantData.name = document.getElementById('dropdown').value;
   selectedPlantData.potDecorations = document.querySelector('input[name="potDecorations"]').checked;
   selectedPlantData.potColorToggle = document.querySelector('input[name="potColorToggle"]').checked;
   selectedPlantData.potColor = selectedPlantData.colorToggle ? document.querySelector('input[name="color"]:checked').value : null;
+} */
 
-}
 
 form.addEventListener('change', () => {
-  updateSelectedPlantData();
+  // updateSelectedPlantData();
   console.log('Selected Plant Data:', selectedPlantData);
+  renderCards(selectedPlantData);
 });
+

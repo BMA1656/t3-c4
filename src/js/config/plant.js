@@ -1,14 +1,27 @@
 import Publisher from "./publisher.js";
 
+const originalPlantData = localStorage.getItem("localPlant");
+const originalPlant = JSON.parse(originalPlantData);
+
 const plantChange = new Publisher();
 
-const handleSoilChange = (event) => {
-  //data-id = aglaonema
-  plantChange.publish(plant)
+const handlePlantChange = () => {
+  const select = document.getElementById("dropdown");
+  select.addEventListener("change", (event) => {
+    const value = event.target.value;
+    console.log("plantName", value);
+    plantChange.publish(value);
+  });
 };
 
-const initPlant = () => {
-  plantInputs.forEach(plant => {
-    plant.addEventListener('change', handleSoilChange);
-  });
+function renderPlantChange(value) {
+  console.log("renderplantName", value);
+  originalPlant.name = value; // NO SALE
 }
+
+function initNamePlant(){
+  handlePlantChange();
+  plantChange.subscribe(renderPlantChange);
+}
+
+export default initNamePlant;
