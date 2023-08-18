@@ -21,30 +21,19 @@ export default class Plant {
   addName(nameValue) {
     this.name = nameValue;
   }
-  addPlantUrl(planturl) {
-    this.url = planturl
-  }
-  addPodUrl(plantPod) {
-    this.podUrl = plantPod
-  }
   addColor(color){
     this.color = color
   }
   makeCard() {
     const cardData = {
       name: this.name,
-      type: this.type,
       color: this.color,
       light: this.light,
-      overwaters: this.overwaters,
       composting: this.composting,
-      platUrl: this.url,
       material: this.material,
       style: this.style,
       elements: this.elements,
-      podUrl: this.podUrl,
     };
-    console.log(cardData)
     renderCards(cardData);
   }
 

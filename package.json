@@ -20,7 +20,11 @@
   },
   "homepage": "https://github.com/BMA1656/t3-c4#readme",
   "devDependencies": {
-    "eslint": "^8.46.0",
+    "eslint": "^8.47.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1",
     "html-webpack-plugin": "^5.5.3",
     "prettier": "^3.0.0",
     "webpack": "^5.88.2",
