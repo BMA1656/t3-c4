@@ -5,8 +5,9 @@ const originalPlant = JSON.parse(originalPlantData);
 
 function renderPotMaterialChange(material) {
   console.log("material", material);
-  originalPlant.podUrl = "" ;// AGREGAR IMAGEN AQUI
-  originalPlant.material = material // no se puede
+  originalPlant.material = material 
+  const newPlant = JSON.stringify(originalPlant);
+  localStorage.setItem("localPlantq", newPlant);
 }
 
 function renderPotDecorationChange(decoration) {

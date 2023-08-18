@@ -8,6 +8,7 @@ const handlePotMaterialChange = () => {
   inputMaterial.forEach((input) => {
     input.addEventListener('change', (event) => {
       const material = event.currentTarget.dataset.id;
+      console.log(material)
       potMaterialChange.publish(material)
     })
   });
