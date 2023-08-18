@@ -16,82 +16,99 @@
             <p>Pot material:</p>
             <label>
               <input
-              data-id="clay"
+                data-id="clay"
+                class="input-material"
                 name="material"
                 value="clay"
                 type="radio"
                 required
-              />Clay</label>
-              <label>
+              />Clay</label
+            >
+            <label>
               <input
-              data-id="ceramic"
+                data-id="ceramic"
+                class="input-material"
                 name="material"
                 value="ceramic"
                 type="radio"
                 required
-              />Ceramic</label>
+              />Ceramic</label
+            >
           </div>
 
           <div class="question">
             <p>Pot decoration</p>
             <label class="switch">
-              <input name="potDecorations" type="checkbox" id="decorationToggle">
+              <input
+                name="potDecorations"
+                type="checkbox"
+                id="decorationToggle"
+              />
               <span class="slider round"></span>
             </label>
-            <div id="decorationOptions" style="display: none;">
+            <div id="decorationOptions" style="display: none">
               <label>
-                <input 
-                data-id="simple"
-                type="radio" 
-                name="decoration"
-                value="simple"
-                required
-                >Simple</label>
-                <label>
-                  <input
-                  data-id="decorated" 
-                  type="radio" 
+                <input
+                  data-id="simple"
+                  class="input-decoration"
+                  type="radio"
                   name="decoration"
-                  value="decorated">Decorated</label>
+                  value="simple"
+                  required
+                />Simple</label
+              >
+              <label>
+                <input
+                  data-id="decorated"
+                  class="input-decoration"
+                  type="radio"
+                  name="decoration"
+                  value="decorated"
+                />Decorated</label
+              >
             </div>
             <p id="toggleTextDecoration">No</p>
           </div>
-          
+
           <div class="question">
             <p>Pot color</p>
             <label class="switch">
-              <input name="potColorToggle" type="checkbox" id="colorToggle">
+              <input name="potColorToggle" type="checkbox" id="colorToggle" />
               <span class="slider round"></span>
             </label>
-            <div id="colorOptions" style="display: none;">
+            <div id="colorOptions" style="display: none">
               <label for="blue">
                 <input
-                data-id="blue"
-                class="blue-input" 
-                type="radio" 
-                name="color" 
-                value="blue"></label>
+                  data-id="blue"
+                  class="blue-input input-color"
+                  type="radio"
+                  name="color"
+                  value="blue"
+              /></label>
               <label for="pink">
-                <input 
-                data-id="pink"
-                class="pink-input" 
-                type="radio" 
-                name="color" 
-                value="pink"></label>
+                <input
+                  data-id="pink"
+                  class="pink-input input-color"
+                  type="radio"
+                  name="color"
+                  value="pink"
+              /></label>
               <label for="green">
-                <input 
-                data-id="green"
-                class="green-input" 
-                type="radio" 
-                name="color" 
-                value="green"></label>
+                <input
+                  data-id="green"
+                  class="green-input input-color"
+                  type="radio"
+                  name="color"
+                  value="green"
+              /></label>
               <label for="purple">
-                <input 
-                data-id="purple"
-                class="purple-input" 
-                type="radio" 
-                name="color" 
-                value="purple"></label>
+                <input
+                  data-id="purple"
+                  class="purple-input input-color"
+                  type="radio"
+                  name="color"
+                  value="purple"
+              /></label>
             </div>
             <p id="toggleTextColor">No</p>
           </div>
@@ -100,79 +117,84 @@
             <p>Choose your soil:</p>
             <label>
               <input
-              data-id="basicSoil"
-              name="soil"
-              value="basic"
-              type="radio"
-              required
-              />Basic composted soil</label>
-              <label>
-                <input
-                data-id="premiumSoil"
+                data-id="composted"
+                class="input-soil"
+                name="soil"
+                value="basic"
+                type="radio"
+                required
+              />Basic composted soil</label
+            >
+            <label>
+              <input
+                data-id="fertilized"
+                class="input-soil"
                 name="soil"
                 value="premium"
                 type="radio"
                 required
-                />Premium fertilized soil</label>
-                <label>
-                  <input
-                  data-id="easySoil"
-                    name="soil"
-                    value="easy"
-                    type="radio"
-                    required
-                  />Easy drainage soil</label>
+              />Premium fertilized soil</label
+            >
+            <label>
+              <input
+                data-id="drainage"
+                class="input-soil"
+                name="soil"
+                value="easy"
+                type="radio"
+                required
+              />Easy drainage soil</label
+            >
           </div>
 
           <div class="question">
             <p>Choose your plant</p>
-        <select id="dropdown" name="role" class="form-control" required>
-          <option disabled selected value>Select</option>
-          <option 
-          data-id="aglaonema"
-          value="aglaonema">
-          Aglaonema</option>
-          <option 
-          data-id="peaceLily"
-          value="peaceLily">
-          Peace Lily</option>
-          <option 
-          data-id="monstera"
-          value="monstera">
-          Monstera Deliciosa</option>
-        </select>
+            <select id="dropdown" name="role" class="form-control" required>
+              <option disabled selected value>Select</option>
+              <option data-id="aglaonema" value="aglaonema">Aglaonema</option>
+              <option data-id="peaceLily" value="peaceLily">Peace Lily</option>
+              <option data-id="monstera" value="monstera">
+                Monstera Deliciosa
+              </option>
+            </select>
           </div>
-    
+
           <div class="question">
             <p>Choose your extras:</p>
             <label for="elements">
-              <input 
+              <input
                 data-id="mosspole"
-                type="checkbox" 
-                name="elements" 
+                class="input-extra"
+                type="checkbox"
+                name="elements"
                 value="moss-pole"
-              />Moss pole</label>            
+              />Moss pole</label
+            >
             <label for="elements">
-              <input 
+              <input
                 data-id="pebbles"
-                type="checkbox" 
-                name="elements" 
-                value="pebbles" 
-              />Pebbles</label>           
+                class="input-extra"
+                type="checkbox"
+                name="elements"
+                value="pebbles"
+              />Pebbles</label
+            >
             <label for="elements">
-              <input 
+              <input
                 data-id="smallerplants"
-                type="checkbox" 
-                name="elements" 
-                value="mini-plants" 
-              />Smaller plants</label>
+                class="input-extra"
+                type="checkbox"
+                name="elements"
+                value="mini-plants"
+              />Smaller plants</label
+            >
           </div>
         </form>
       </div>
 
       <div id="card-container" class="card-container"></div>
     </main>
-    <!--  <script src="js/customIndex.bundle.js"></script> -->
-    <script src="../src/customize.js"></script>
+    <script src="js/customIndex.bundle.js"></script>
+    <script type="module" src="../src/customize.js"></script>
   </body>
 </html>
