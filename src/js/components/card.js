@@ -21,7 +21,7 @@ function renderCards(plant) {
       <div id="imgPlantsContainer" class="img-container">
         <img class="image plantImage" src="${platUrl}" alt="">
         <img class="image potImage" src="${podUrl}" alt="">
-        <img class="image soilImage" src="img/soil-${composting}.png" alt="">
+        <img id="soilImg" class="image soilImage" src="img/soil-${composting}.png" alt="">
       </div>
       <div class="description">
       <div class="infoName"><h3>Name: </h3><p class="descripCard">${name}</p></div>

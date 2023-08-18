@@ -46,7 +46,7 @@ export default function cretateObject(object) {
     });
     return plantvalue;
   }
- 
+
   function getMaterial(object) {
     switch (object) {
       case "clay":
