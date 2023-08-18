@@ -51,7 +51,7 @@ export default function cretateObject(object) {
       case "clay":
         console.log("Opción 1 seleccionada");
         plantmat = "Clay";
-        plantStyle = object+" simple pod"
+        plantStyle = object+" simple pot"
         plantPodUrl = "img/simple-clay-pot.png";
         console.log(plantmat,plantPodUrl,plantStyle)
         break;

@@ -4,68 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plants</title>
-    <link rel="stylesheet" href="/src/css/customize.css" />
+    <link rel="stylesheet" href="css/customize.css" />
   </head>
 
   <body>
     <main>
       <div>
         <h1>Customize your plant</h1>
-        <form id="plantForm">
+        <form id="customizationForm">
           <div class="question">
             <p>Pot material:</p>
             <label>
               <input
+              data-id="clay"
                 name="material"
                 value="clay"
                 type="radio"
                 required
               />Clay</label>
               <label>
-                <input
-                  name="material"
-                  value="ceramic"
-                  type="radio"
-                  required
-                />Ceramic</label>
+              <input
+              data-id="ceramic"
+                name="material"
+                value="ceramic"
+                type="radio"
+                required
+              />Ceramic</label>
           </div>
 
           <div class="question">
             <p>Pot decoration</p>
             <label class="switch">
-              <input type="checkbox" id="decorationToggle">
+              <input name="potDecorations" type="checkbox" id="decorationToggle">
               <span class="slider round"></span>
             </label>
+            <div id="decorationOptions" style="display: none;">
+              <label>
+                <input 
+                data-id="simple"
+                type="radio" 
+                name="decoration"
+                value="simple"
+                required
+                >Simple</label>
+                <label>
+                  <input
+                  data-id="decorated" 
+                  type="radio" 
+                  name="decoration"
+                  value="decorated">Decorated</label>
+            </div>
             <p id="toggleTextDecoration">No</p>
           </div>
           
           <div class="question">
             <p>Pot color</p>
             <label class="switch">
-              <input type="checkbox" id="colorToggle">
+              <input name="potColorToggle" type="checkbox" id="colorToggle">
               <span class="slider round"></span>
             </label>
             <div id="colorOptions" style="display: none;">
-              <label>
-                <input 
+              <label for="blue">
+                <input
+                data-id="blue"
                 class="blue-input" 
                 type="radio" 
                 name="color" 
                 value="blue"></label>
-              <label>
+              <label for="pink">
                 <input 
+                data-id="pink"
                 class="pink-input" 
                 type="radio" 
                 name="color" 
                 value="pink"></label>
-              <label>
+              <label for="green">
                 <input 
+                data-id="green"
                 class="green-input" 
                 type="radio" 
                 name="color" 
                 value="green"></label>
-              <label>
+              <label for="purple">
                 <input 
+                data-id="purple"
                 class="purple-input" 
                 type="radio" 
                 name="color" 
@@ -75,12 +97,49 @@
           </div>
 
           <div class="question">
+            <p>Choose your soil:</p>
+            <label>
+              <input
+              data-id="basicSoil"
+              name="soil"
+              value="basic"
+              type="radio"
+              required
+              />Basic composted soil</label>
+              <label>
+                <input
+                data-id="premiumSoil"
+                name="soil"
+                value="premium"
+                type="radio"
+                required
+                />Premium fertilized soil</label>
+                <label>
+                  <input
+                  data-id="easySoil"
+                    name="soil"
+                    value="easy"
+                    type="radio"
+                    required
+                  />Easy drainage soil</label>
+          </div>
+
+          <div class="question">
             <p>Choose your plant</p>
         <select id="dropdown" name="role" class="form-control" required>
           <option disabled selected value>Select</option>
-          <option value="aglaonema">Aglaonema</option>
-          <option value="peaceLily">Peace Lily</option>
-          <option value="monstera">Monstera Deliciosa</option>
+          <option 
+          data-id="aglaonema"
+          value="aglaonema">
+          Aglaonema</option>
+          <option 
+          data-id="peaceLily"
+          value="peaceLily">
+          Peace Lily</option>
+          <option 
+          data-id="monstera"
+          value="monstera">
+          Monstera Deliciosa</option>
         </select>
           </div>
     
@@ -88,33 +147,32 @@
             <p>Choose your extras:</p>
             <label for="elements">
               <input 
+                data-id="mosspole"
                 type="checkbox" 
                 name="elements" 
                 value="moss-pole"
               />Moss pole</label>            
             <label for="elements">
               <input 
+                data-id="pebbles"
                 type="checkbox" 
                 name="elements" 
                 value="pebbles" 
               />Pebbles</label>           
             <label for="elements">
               <input 
+                data-id="smallerplants"
                 type="checkbox" 
                 name="elements" 
                 value="mini-plants" 
               />Smaller plants</label>
-          </div>
-          
-          <div>
-            <button type="submit">Get your plant!</button>
-            <button type="reset">Clear</button>
           </div>
         </form>
       </div>
 
       <div id="card-container" class="card-container"></div>
     </main>
-    <script src="js/customIndex.bundle.js"></script>
+    <!--  <script src="js/customIndex.bundle.js"></script> -->
+    <script src="../src/customize.js"></script>
   </body>
 </html>
