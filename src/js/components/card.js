@@ -1,7 +1,4 @@
-
-
 function renderCards(plant) {
-  console.log(plant)
   const newPlant = JSON.stringify(plant);
   localStorage.setItem("localPlant", newPlant);
   const cardContainer = document.getElementById('card-container');
@@ -19,7 +16,7 @@ function renderCards(plant) {
       <p>The perfect plant for you <span class="name-plant">${name}</span></p>
       <div id="imgPlantsContainer" class="img-container">
         <img class="image plantImage" src="Assets/plant-${replaceSpacesAndLowercase(name)}.png" alt="">
-        <img class="image potImage" src="Assets/pots/${replaceSpacesAndLowercase(style)}-${color}.png" alt="">
+        <img class="image potImage" src="Assets/pots/${replaceSpacesAndLowercase(`${material} ${style}`)}-${color}.png" alt="">
         <img class="image soilImage" src="Assets/soil-${composting}.png" alt="">
       </div>
       <div class="description">

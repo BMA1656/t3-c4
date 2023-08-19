@@ -8,7 +8,6 @@ const handlePotMaterialChange = () => {
   inputMaterial.forEach((input) => {
     input.addEventListener('change', (event) => {
       const material = event.currentTarget.dataset.id;
-      console.log(material)
       potMaterialChange.publish(material)
     })
   });
@@ -39,6 +38,9 @@ const handlePotColorChange = () => {
     })
   });
 }
+
+
+
 
 /// INICIALIZA FUNCIONES QUE OBTIENEN EL PARAMETRO
 function getPotInputsValues () {

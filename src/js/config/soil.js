@@ -1,7 +1,6 @@
 import Publisher from "./publisher.js";
+import { localStorageObject,localStorageObjectCreateRenew } from "../components/localstorage.js";
 
-const originalPlantData = localStorage.getItem("localPlant");
-const originalPlant = JSON.parse(originalPlantData);
 
 const soilChange = new Publisher();
 
@@ -11,16 +10,14 @@ const handleSoilChange = () => {
     input.addEventListener('change', (event) => {
       const soil = event.currentTarget.dataset.id;
       soilChange.publish(soil)
-      console.log("soil" ,soil);
     })
   })
 };
 
 function renderSoilChange(soil) {
-  console.log("rendersoil", soil);
-  const soilImage = document.getElementById('soilImg'); // APARECE NULL
-  soilImage.setAttribute = ('src', `../img/soil-${soil}.png`);
-  originalPlant.composting = soil // no se puede
+  const originalPlant = localStorageObject();
+  originalPlant.composting = soil;
+  localStorageObjectCreateRenew(originalPlant);
 }
 
 function initSoil() {

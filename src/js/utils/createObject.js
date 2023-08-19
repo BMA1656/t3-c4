@@ -43,22 +43,22 @@ export default function cretateObject(object) {
       case "clay":
         console.log("Opción 1 seleccionada");
         plantmat = "Clay";
-        plantStyle = "Clay Simple"
+        plantStyle = "Simple"
         break;
       case "clay-decorated":
         console.log("Opción 2 seleccionada");
         plantmat = "Clay";
-        plantStyle = "Clay Decorated"
+        plantStyle = "Decorated"
         break;
       case "ceramic":
         console.log("Opción 3 seleccionada");
         plantmat = "Ceramic";
-        plantStyle = "Ceramic Simple"
+        plantStyle = "Simple"
         break;
       case "ceramic-decorated":
         console.log("Opción 4 seleccionada");
         plantmat = "Ceramic";
-        plantStyle = "Ceramic Decorated"
+        plantStyle = "Decorated"
         break;
       default:
         console.log("Opción no reconocida");
