@@ -4,7 +4,8 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    customIndex: './src/customize.js'
+    customIndex: './src/customize.js',
+    productIndex:'./src/product.js'
   },
   output: {
     filename: '[name].bundle.js',
