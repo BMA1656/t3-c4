@@ -1,1 +1,32 @@
 @import url("styles.css");
+
+.productMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+#dataContainer{
+    margin-top: 40px;
+}
+
+
+#dataContainer details {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+#dataContainer details  summary {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+}
+
+#dataContainer details  p {
+    padding: 10px 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
