@@ -3,8 +3,8 @@ import initRenderPots from './js/config/renderPots.js';
 import initSoil from './js/config/soil.js';
 import initNamePlant from './js/config/plant.js';
 import initExtras from './js/config/extras.js';
-import { CustomPlantcard } from './js/components/customiceCard.js';
 import { localStorageObject,localStorageObjectCreateRenew } from './js/components/localstorage.js';
+import renderCards from './js/components/card.js';
 
 
 const decorationOptions = document.getElementById('decorationOptions')
@@ -44,7 +44,7 @@ const form = document.getElementById('customizationForm');
 form.addEventListener('change', () => {
   const originalPlantData = localStorage.getItem("localPlant");
   const originalPlant = JSON.parse(originalPlantData); 
-  CustomPlantcard(originalPlant);
+  renderCards(originalPlant);
 });
 
 
@@ -54,5 +54,5 @@ document.addEventListener('DOMContentLoaded',() => {
   initSoil();
   initNamePlant();
   initExtras();
-  CustomPlantcard(localStorageObject());
+  renderCards(localStorageObject());
 })
