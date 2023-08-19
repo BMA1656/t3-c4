@@ -1,15 +1,11 @@
-import renderCards from './js/components/card.js';
 import { getPotInputsValues } from './js/config/pot.js';
 import initRenderPots from './js/config/renderPots.js';
 import initSoil from './js/config/soil.js';
 import initNamePlant from './js/config/plant.js';
 import initExtras from './js/config/extras.js';
+import { CustomPlantcard } from './js/components/customiceCard.js';
+import { localStorageObject,localStorageObjectCreateRenew } from './js/components/localstorage.js';
 
-getPotInputsValues();
-initRenderPots();
-initSoil();
-initNamePlant();
-initExtras();
 
 const decorationOptions = document.getElementById('decorationOptions')
 const decorationToggle = document.getElementById('decorationToggle');
@@ -35,28 +31,28 @@ colorToggle.addEventListener('change', function () {
   } else {
     colorOptions.style.display = 'none';
     toggleTextColor.textContent = 'No';
+    const originalPlant = localStorageObject();
+    originalPlant.color = "unpainted";
+    localStorageObjectCreateRenew(originalPlant); 
   }
 });
 
-const originalPlantData = localStorage.getItem("localPlant");
-const originalPlant = JSON.parse(originalPlantData); 
 
 const form = document.getElementById('customizationForm');
-const selectedPlantData = { ...originalPlant };
-
-
-/* function updateSelectedPlantData() {
- //selectedPlantData.name = document.getElementById('choosePlant').value;
-  selectedPlantData.name = document.getElementById('dropdown').value;
-  selectedPlantData.potDecorations = document.querySelector('input[name="potDecorations"]').checked;
-  selectedPlantData.potColorToggle = document.querySelector('input[name="potColorToggle"]').checked;
-  selectedPlantData.potColor = selectedPlantData.colorToggle ? document.querySelector('input[name="color"]:checked').value : null;
-} */
 
 
 form.addEventListener('change', () => {
-  // updateSelectedPlantData();
-  console.log('Selected Plant Data:', selectedPlantData);
-  renderCards(selectedPlantData);
+  const originalPlantData = localStorage.getItem("localPlant");
+  const originalPlant = JSON.parse(originalPlantData); 
+  CustomPlantcard(originalPlant);
 });
 
+
+document.addEventListener('DOMContentLoaded',() => { 
+  getPotInputsValues();
+  initRenderPots();
+  initSoil();
+  initNamePlant();
+  initExtras();
+  CustomPlantcard(localStorageObject());
+})

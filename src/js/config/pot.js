@@ -39,6 +39,9 @@ const handlePotColorChange = () => {
   });
 }
 
+
+
+
 /// INICIALIZA FUNCIONES QUE OBTIENEN EL PARAMETRO
 function getPotInputsValues () {
   handlePotMaterialChange();

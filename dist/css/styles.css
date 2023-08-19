@@ -23,11 +23,13 @@ input {
   text-align: left;
   flex-direction: column;
 }
+
 .question p {
   font-size: 20px;
   font-weight: 600;
   margin: 5px;
 }
+
 .question input {
   width: 26px;
   height: 26px;
@@ -35,10 +37,12 @@ input {
   position: relative;
   top: 5px;
 }
+
 .checkbox input {
   appearance: none;
   border: 2px #bab6b6 solid;
 }
+
 .checkbox input[type='checkbox']:checked::before {
   content: '\2713';
   font-size: 16px;
@@ -46,6 +50,7 @@ input {
   position: absolute;
   left: 5px;
 }
+
 .subBt,
 .resetBt {
   color: white;
@@ -59,7 +64,8 @@ input {
 .subBt:hover {
   background-color: blueviolet;
 }
-.subBt:active{
+
+.subBt:active {
   background-color: white;
   color: rgb(152, 5, 152);
 }
@@ -74,8 +80,8 @@ input {
   background-color: rgb(193, 87, 193);
   color: white;
 }
+
 .resetBt:active {
   background-color: rgb(152, 5, 152);
   color: white;
 }
-

@@ -3,11 +3,9 @@ import plantsData from "../source/config.js"
 
 
 export default function cretateObject(object) {
-  let plantmat; 
-  let plantPodUrl;
+  let plantmat;
   let plantStyle;
   getMaterial(object.style)
-  const planturl = getPlantUrl(object);
   const plantname = getPlantName(object);  
   const {
     type,
@@ -19,28 +17,22 @@ export default function cretateObject(object) {
   } = object;
   const plant = new Plant(type, light, watering, elements);
   plant.addComposting(composting);
+  plant.addColor("unpainted")
   plant.addStyle(plantStyle);
   plant.addMaterial(plantmat)
   plant.addName(plantname)
-  plant.addPlantUrl(planturl)
-  plant.addPodUrl(plantPodUrl)
   plant.makeCard();
-
-  function getPlantUrl(object) {
-    let plantvalue = null;
-    plantsData.forEach(plant => {
-      if (plant.type.includes(object.type) && plant.watering === object.watering && plant.light.includes(object.light)) {
-        plantvalue = plant.img;
-      }
-    });
-    return plantvalue;
-  }
 
   function getPlantName(object) {
     let plantvalue = null;
     plantsData.forEach(plant => {
-      if (plant.type.includes(object.type) && plant.watering === object.watering && plant.light.includes(object.light)) {
-        plantvalue = plant.name;
+      if (plant.type.includes(object.type)&& plant.light.includes(object.light)) {
+        if (plant.watering === "overwater" && object.type =="toxic") {
+          plantvalue = "Peace Lily";
+        }
+        else{
+          plantvalue = plant.name;
+        }
       }
     });
     return plantvalue;
@@ -51,30 +43,22 @@ export default function cretateObject(object) {
       case "clay":
         console.log("Opción 1 seleccionada");
         plantmat = "Clay";
-        plantStyle = object+" simple pot"
-        plantPodUrl = "img/simple-clay-pot.png";
-        console.log(plantmat,plantPodUrl,plantStyle)
+        plantStyle = "Simple"
         break;
       case "clay-decorated":
         console.log("Opción 2 seleccionada");
-        plantmat = "Clay Decorated";
-        plantStyle = object+" decorated pot"
-        plantPodUrl = "img/simple-clay-pot-decorated.png";
-        console.log(plantmat,plantPodUrl,plantStyle)
+        plantmat = "Clay";
+        plantStyle = "Decorated"
         break;
       case "ceramic":
         console.log("Opción 3 seleccionada");
-        plantmat = "ceramic";
-        plantStyle =   object+" simple pot"
-        plantPodUrl = "img/simple-ceramic-pot.png";
-        console.log(plantmat,plantPodUrl)
+        plantmat = "Ceramic";
+        plantStyle = "Simple"
         break;
       case "ceramic-decorated":
         console.log("Opción 4 seleccionada");
-        plantmat = "Ceramic Decorated";
-        plantStyle = object+" Decorated pod"
-        plantPodUrl = "img/simple-ceramic-pot-decorated.png";
-        console.log(plantmat,plantPodUrl);
+        plantmat = "Ceramic";
+        plantStyle = "Decorated"
         break;
       default:
         console.log("Opción no reconocida");

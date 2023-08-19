@@ -1,25 +1,48 @@
+import { localStorageObject,localStorageObjectCreateRenew } from "../components/localstorage.js";
 import Publisher from "./publisher.js";
 
-const originalPlantData = localStorage.getItem("localPlant");
-const originalPlant = JSON.parse(originalPlantData);
 
 const extrasChange = new Publisher();
 
 const handleExtrasChange = () => {
   const inputExtras = document.querySelectorAll(".input-extra");
+  const selectedExtras = [];
+
   inputExtras.forEach((input) => {
     input.addEventListener('change', (event) => {
-      const extra = event.currentTarget.dataset.id;
+      const extras = event.currentTarget.dataset.id;
+      // Actualizar el array de valores seleccionados
+      if (input.checked) {
+        selectedExtras.push(extras);
+      } else {
+        const index = selectedExtras.indexOf(extras);
+        if (index !== -1) {
+          selectedExtras.splice(index, 1);
+        }
+      }
+      // Definir el valor de 'extra' según la cantidad de elementos seleccionados
+      let extra = null;
+      if (selectedExtras.length === 1) {
+        extra = selectedExtras[0];
+      } else if (selectedExtras.length > 1) {
+        extra = selectedExtras;
+      }      
+      // Publicar el valor actual de 'extra'
       extrasChange.publish(extra);
-      console.log("extras", extra);
     });
-  })
+  });
 };
 
+
+
 function renderExtrasChange(extra) {
-  console.log("renderExtrasChange", extra);
-  // IMAGEN
-  originalPlant.elements = extra; // NO SIRVE
+    const originalPlant = localStorageObject();
+    if (extra === null) {
+      delete originalPlant.elements
+    }else{
+      originalPlant.elements = extra;
+    }
+  localStorageObjectCreateRenew(originalPlant);
 }
 
 function initExtras() {

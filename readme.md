@@ -26,7 +26,7 @@ The bundled files will be generated in the dist/ folder.
 ESLint
 ESLint is configured to ensure that the code remains clean and follows coding best practices. You can check ESLint issues by running the following command:
 
-npm run lint
+`npx eslint --init`
 
 Prettier
 Prettier takes care of automatic code formatting to maintain style consistency. Execute Prettier with the following command:
