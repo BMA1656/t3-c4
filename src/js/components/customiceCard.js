@@ -17,7 +17,7 @@ export function CustomPlantcard(plant) {
         <div class="infoSoil"><h3>Color: </h3><p class="descripCard">${color}</p></div>
         <div id="elements" class="infoExtras"><h3>Extras: </h3><p class="descripCard moreElements">${elements}</p></div>
         </div>
-        <a class="customize-btn" href="customize.html" id="Customice">See stock</a>
+        <a class="customize-btn" href="product.html" id="Customice">See stock</a>
       </div>
       `
     cardContainer.innerHTML = card;
