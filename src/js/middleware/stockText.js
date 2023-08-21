@@ -1,18 +1,35 @@
-function getStockBtn(description) {
-  let alert = '';
+function getStockBtn (description, next) {
+  let alert = ''
+  let hasLimitedStock = false
+  let isOutOfStock = false
+  const stockBlockElement = document.getElementById('stockBlock')
 
-  description.stock.forEach((item) => {
-    if (item.stock >= 10) {
-      alert = '<span class="green">in stock</span>';
+  for (const itemType in description.stock) {
+    const currentStock = description.stock[itemType].stock
+    if (currentStock === 0) {
+      isOutOfStock = true
+    } else if (currentStock > 0 && currentStock < 10) {
+      hasLimitedStock = true
     }
-    else if (item.stock > 0 && item.stock < 10) {
-      alert = '<span class="yellow">one of the items in your order has limited stock. Order soon!</span>';
-    }
-    else {
-      alert = '<span class="red">one of the items in your order is out of stock. Please check the inventory alerts.</span>';
-    }
-  });
-  return alert;
+  }
+
+  if (isOutOfStock) {
+    alert =
+      'one of the items in your order is out of stock. Please check the inventory alerts.'
+    stockBlockElement.textContent = alert
+    stockBlockElement.classList.add('red')
+    const btn = document.getElementById('buybtn')
+    btn.classList.add('disabled-link')
+  } else if (hasLimitedStock) {
+    alert = 'one of the items in your order has limited stock. Order soon!'
+    stockBlockElement.textContent = alert
+    stockBlockElement.classList.add('yellow')
+  } else {
+    alert = 'in stock'
+    stockBlockElement.textContent = alert
+    stockBlockElement.classList.add('green')
+  }
+  next()
 }
 
 export { getStockBtn }

@@ -1,22 +1,19 @@
-function renderCards(plant) {
-  const newPlant = JSON.stringify(plant);
-  localStorage.setItem("localPlant", newPlant);
-  const cardContainer = document.getElementById('card-container');
-  cardContainer.innerHTML = "";
-  const {
-    name,
-    composting,
-    color,
-    style,
-    elements,
-    material
-  } = plant;
-  let card = `
+function renderCards (plant) {
+  const newPlant = JSON.stringify(plant)
+  localStorage.setItem('localPlant', newPlant)
+  const cardContainer = document.getElementById('card-container')
+  cardContainer.innerHTML = ''
+  const { name, composting, color, style, elements, material } = plant
+  const card = `
     <div class="card">
       <p>The perfect plant for you <span class="name-plant">${name}</span></p>
       <div id="imgPlantsContainer" class="img-container">
-        <img class="image plantImage" src="Assets/plant-${replaceSpacesAndLowercase(name)}.png" alt="">
-        <img class="image potImage" src="Assets/pots/${replaceSpacesAndLowercase(`${material} ${style}`)}-${color}.png" alt="">
+        <img class="image plantImage" src="Assets/plant-${replaceSpacesAndLowercase(
+          name
+        )}.png" alt="">
+        <img class="image potImage" src="Assets/pots/${replaceSpacesAndLowercase(
+          `${material} ${style}`
+        )}-${color}.png" alt="">
         <img class="image soilImage" src="Assets/soil-${composting}.png" alt="">
       </div>
       <div class="description">
@@ -29,47 +26,51 @@ function renderCards(plant) {
       
     </div>
     `
-  cardContainer.innerHTML = card;
-  addElementsToCard(elements) 
-const container =document.getElementById("objectConteiner")
-container.style.display = 'block';
+  cardContainer.innerHTML = card
+  addElementsToCard(elements)
+  const container = document.getElementById('objectConteiner')
+  container.style.display = 'block'
 }
 
-function addElementsToCard(elements) {
-  const imgContainer = document.getElementById("imgPlantsContainer");
+function addElementsToCard (elements) {
+  const imgContainer = document.getElementById('imgPlantsContainer')
   if (elements && elements.length > 0) {
     if (Array.isArray(elements)) {
       elements.forEach((element) => {
-        imgContainer.innerHTML += `<img class="image extra${element}" src="Assets/${extraImgUrl(element)}.png" alt="">`;
-      });
+        imgContainer.innerHTML += `<img class="image extra${element}" src="Assets/${extraImgUrl(
+          element
+        )}.png" alt="">`
+      })
     } else {
-      imgContainer.innerHTML += `<img class="image extra${elements}" src="Assets/${extraImgUrl(elements)}.png" alt="">`;
+      imgContainer.innerHTML += `<img class="image extra${elements}" src="Assets/${extraImgUrl(
+        elements
+      )}.png" alt="">`
     }
   } else {
-    const test = document.getElementById("elements");
+    const test = document.getElementById('elements')
     if (test) {
-      test.remove();
+      test.remove()
     }
   }
 }
 
- function extraImgUrl(elements){
+function extraImgUrl (elements) {
   switch (elements) {
-      case "moss":
-        return "moss-pole";
-      case "pebbles":
-        return "pebbles";
-      case "mini":
-        return "mini-plants";
-      default:
-        return ""; 
-    }
+    case 'moss':
+      return 'moss-pole'
+    case 'pebbles':
+      return 'pebbles'
+    case 'mini':
+      return 'mini-plants'
+    default:
+      return ''
+  }
 }
 
-function replaceSpacesAndLowercase(inputString) {
-  var stringWithHyphens = inputString.replace(/ /g, '-');
-  var lowercaseString = stringWithHyphens.toLowerCase();
-  return lowercaseString;
+function replaceSpacesAndLowercase (inputString) {
+  const stringWithHyphens = inputString.replace(/ /g, '-')
+  const lowercaseString = stringWithHyphens.toLowerCase()
+  return lowercaseString
 }
 
-export default renderCards;
+export default renderCards

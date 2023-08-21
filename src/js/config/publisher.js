@@ -1,13 +1,15 @@
 class Publisher {
-  constructor() {
-    this.subscribers = [];
+  constructor () {
+    this.subscribers = []
   }
-  subscribe(fn) { 
-    this.subscribers.push(fn);
+
+  subscribe (fn) {
+    this.subscribers.push(fn)
   }
-  publish(data) {
-    this.subscribers.forEach(fn => fn(data));
+
+  publish (data) {
+    this.subscribers.forEach((fn) => fn(data))
   }
 }
 
-export default Publisher;
+export default Publisher

@@ -1,36 +1,34 @@
-import renderCards from "./js/components/card.js";
-import { localStorageObject } from "./js/components/localstorage.js";
-import { addMiddleware, execute } from "./js/middleware/pipeline.js";
-import { getInfoApi } from "./js/middleware/infoApi.js";
-import { getStockBtn } from "./js/middleware/stockText.js";
+import renderCards from './js/components/card.js'
+import { localStorageObject } from './js/components/localstorage.js'
+import { addMiddleware, execute } from './js/middleware/pipeline.js'
+import { getInfoApi } from './js/middleware/infoApi.js'
+import { getStockBtn } from './js/middleware/stockText.js'
+import { newObject } from './js/dataCards/cardsValue.js'
+import { inventoryAlertsCard } from './js/dataCards/invAlert.js'
+import { PriceInfoCalc } from './js/dataCards/priceInfo.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderCards(localStorageObject());
+  renderCards(localStorageObject())
 })
 
-addMiddleware(getInfoApi, getStockBtn);
-await execute({});
+addMiddleware(getInfoApi)
+addMiddleware(getStockBtn)
+addMiddleware(inventoryAlertsCard)
+addMiddleware(newObject)
+addMiddleware(PriceInfoCalc)
 
-const inventoryElement = document.getElementById("inventory");
-const plantDescriptionElement = document.getElementById("plantDescription");
-const plantCareElement = document.getElementById("consejos");
-const stockBlockElement = document.getElementById('stockBlock');
+const contextInicial = localStorageObject()
+await execute(contextInicial)
 
-stockBlockElement.textContent = localStorageObject().stock;
-inventoryElement.textContent = localStorageObject().stock;
-plantDescriptionElement.textContent = localStorageObject().description;
-plantCareElement.textContent = localStorageObject()[description.care];
-
-const detailsContainers = document.querySelectorAll("#dataContainer details");
+const detailsContainers = document.querySelectorAll('#dataContainer details')
 detailsContainers.forEach((detailsElement) => {
-  detailsElement.addEventListener("toggle", function () {
+  detailsElement.addEventListener('toggle', function () {
     if (this.open) {
       detailsContainers.forEach((otherDetailsElement) => {
         if (otherDetailsElement !== this) {
-          otherDetailsElement.open = false;
+          otherDetailsElement.open = false
         }
-      });
+      })
     }
-  });
-});
-
+  })
+})

@@ -1,4 +1,4 @@
-Integrantes: Brayam Monge - Valeria Acuña 
+Integrantes: Brayam Monge - Valeria Acuña
 
 Project with Webpack, ESLint, and Prettier
 This is a sample project that utilizes Webpack, ESLint, and Prettier to manage dependencies, maintain clean and consistent code, and bundle files for production.
@@ -26,12 +26,17 @@ The bundled files will be generated in the dist/ folder.
 ESLint
 ESLint is configured to ensure that the code remains clean and follows coding best practices. You can check ESLint issues by running the following command:
 
-`npx eslint --init`
+for config use
+ `npx eslint --init`
+
+for use 
+
+` npx eslint src/`
 
 Prettier
 Prettier takes care of automatic code formatting to maintain style consistency. Execute Prettier with the following command:
 
-npm run format
+`npx prettier . --write`
 Project Structure
 
 project-name/
@@ -45,11 +50,9 @@ project-name/
 |- package.json (Node.js dependencies file)
 |- README.md (this file)
 
-
-To start working on this proyect ussing webpack 
+To start working on this proyect ussing webpack
 `npx run start`
 
 to see the changes in the project use
 
 `npm run build`
-
