@@ -1,47 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product</title>
-    <link rel="stylesheet" href="css/product.css">
-</head>
-<body>
- <main class="productMain">
-    <div id="objectConteiner">
+    <link rel="stylesheet" href="css/product.css" />
+  </head>
+  <body>
+    <main class="productMain">
+      <div id="objectConteiner">
         <div id="card-container" class="card-container"></div>
-        <a class="customize-btn" href="customize.html" id="Customice">Back to customize</a>
+        <a class="customize-btn" href="customize.html" id="Customice"
+          >Back to customize</a
+        >
       </div>
       <div>
-        <h1> A plat with custom pot and special soil</h1>
-        <p id="price">0dls</p>
+        <h1>A plat with custom pot and special soil</h1>
+        <h2 id="price">0dls</h2>
         <p id="stockBlock">stock</p>
-        <a href="#" class="customize-btn">Order now</a>
+        <a href="#" id="buybtn" class="customize-btn">Order now</a>
         <div id="dataContainer" class="">
-            <details>
-              <summary>Price breakdown</summary>
-              <div class="panel">
-                <div id="priceBreakdown"></div>
-                <p id="finalprice">0dls</p>
+          <details>
+            <summary>Price breakdown</summary>
+            <div class="panel">
+              <div id="priceBreakdown"></div>
+              <div id="elementsprice"></div>
+              <p id="finalprice">0dls</p>
             </div>
-            </details>    
-            <details>
-              <summary>Inventory Alerts</summary>
-              <p id="inventory">Contenido</p>
-            </details>    
-            <details>
-              <summary>Plant description</summary>
-              <p id="plantDescription">Descripcion</p>
-            </details>
-    
-            <details>
-              <summary>Caring tips</summary>
-              <p id="consejos">Consejos</p>
-            </details>    
-          </div>
+          </details>
+          <details>
+            <summary>Inventory Alerts</summary>
+            <div id="inventory"></div>
+          </details>
+          <details>
+            <summary>Plant description</summary>
+            <p id="plantDescription"></p>
+          </details>
+
+          <details>
+            <summary>Caring tips</summary>
+            <div id="consejos"></div>
+          </details>
+        </div>
       </div>
       <script src="js/productIndex.bundle.js"></script>
-      <script type="module" src="../src/product.js"></script>
-    </main>    
-</body>
+    </main>
+  </body>
 </html>

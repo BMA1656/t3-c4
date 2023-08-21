@@ -1,25 +1,41 @@
-import { getApiInventario, getApiPlantInfo} from "../services/api.js";
-getApiInventario("plant", "fern");
-getApiPlantInfo("aglaonema");
+import { getApiInventario, getApiPlantInfo } from '../services/api.js'
 
 const getInfoApi = async (description, next) => {
   try {
-    const plant = getApiInventario ("plant", `${description.name}`);
-    const soil = getApiInventario ("soil", `${ description.soil}`);
-    const pot = getApiInventario ("pot", `${ description.pot}-${ description.style }-${ description.color }`);
+    const plant = getApiInventario('plant', `${name(description.name)}`)
+    const soil = getApiInventario('soil', `${description.composting}`)
+    const pot = getApiInventario(
+      'pot',
+      `${name(description.material)}-${name(description.style)}-${
+        description.color
+      }`
+    )
 
-    const getDescription = await getApiPlantInfo(description.name);
-    description.info = getDescription;
+    const getDescription = await getApiPlantInfo(name(description.name))
+    description.info = getDescription
 
-    const values = await Promise.all([plant, soil, pot]);
-    description.stock = values;
-    next();
-    console.log(values);
+    const results = await Promise.all([plant, soil, pot])
+    const values = {
+      Plant: results[0],
+      Soil: results[1],
+      Pot: results[2]
+    }
+    description.stock = values
+    next()
   } catch (error) {
-    console.log (error);
   }
-}; 
-
-export {
-  getInfoApi
 }
+
+function name (plantname) {
+  if (plantname === 'Peace Lily') {
+    return 'peaceLily'
+  } else if (plantname === 'Boston Fern') {
+    return 'fern'
+  } else if (plantname === 'Aloe Vera') {
+    return 'aloe'
+  } else {
+    return plantname.toLowerCase()
+  }
+}
+
+export { getInfoApi }

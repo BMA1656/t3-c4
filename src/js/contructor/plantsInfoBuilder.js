@@ -1,30 +1,34 @@
-import renderCards from "../components/card.js";
-
+import renderCards from '../components/card.js'
 
 export default class Plant {
-  constructor(type, light, overwaters, elements) {
-    this.type = type;
-    this.light = light;
-    this.overwaters = overwaters;
-    this.elements = elements;
+  constructor (type, light, overwaters, elements) {
+    this.type = type
+    this.light = light
+    this.overwaters = overwaters
+    this.elements = elements
   }
 
-  addComposting(compostingValue) {
-    this.composting = compostingValue;
+  addComposting (compostingValue) {
+    this.composting = compostingValue
   }
-  addMaterial(material){
+
+  addMaterial (material) {
     this.material = material
   }
-  addStyle(styleValue) {
+
+  addStyle (styleValue) {
     this.style = styleValue
   }
-  addName(nameValue) {
-    this.name = nameValue;
+
+  addName (nameValue) {
+    this.name = nameValue
   }
-  addColor(color){
+
+  addColor (color) {
     this.color = color
   }
-  makeCard() {
+
+  makeCard () {
     const cardData = {
       name: this.name,
       color: this.color,
@@ -32,9 +36,8 @@ export default class Plant {
       composting: this.composting,
       material: this.material,
       style: this.style,
-      elements: this.elements,
-    };
-    renderCards(cardData);
+      elements: this.elements
+    }
+    renderCards(cardData)
   }
-
 }
